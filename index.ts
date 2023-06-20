@@ -16,7 +16,9 @@ app.get('/creditCard', (req, res) => {
   
     res.json(generatedCards);
   });;
-
+  app.get("*", function(req,res){
+    res.redirect('/creditCard')
+});
 app.listen(PORT, ()=> {
     console.log(`Lestening To ${PORT}`)
 })
